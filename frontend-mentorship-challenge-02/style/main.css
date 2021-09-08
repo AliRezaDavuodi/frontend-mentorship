@@ -17,8 +17,8 @@
   height: 100vh;
 }
 #login-form .login-container {
-  width: 400px;
-  height: 530px;
+  width: 40rem;
+  height: 53rem;
   border-radius: 3rem;
   background-color: #abe9cd;
   background-image: linear-gradient(315deg, #abe9cd 0%, #3eadcf 74%);
@@ -204,4 +204,73 @@
 }
 #login-form .login-container .login-form .create-account .active:active {
   transform: scale(0.9);
+}
+
+@media screen and (min-width: 374px) {
+  #login-form .login-container {
+    width: 35rem;
+  }
+  #login-form .login-container .login-form .accept label {
+    font-size: 1.5rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  #login-form .login-container {
+    width: 53rem;
+    height: 45rem;
+  }
+  #login-form .login-container .login-form .float {
+    margin-top: 2rem;
+    height: 3rem;
+  }
+  #login-form .login-container .login-form .float-label {
+    top: 0.5rem;
+  }
+  #login-form .login-container .login-form .float-label-active {
+    left: 0.3rem !important;
+    top: -2rem !important;
+    font-size: 1.8rem !important;
+    color: #000 !important;
+    transition: 300ms;
+  }
+  #login-form .login-container .login-form .gender-title .title {
+    font-size: 1.8rem;
+  }
+  #login-form .login-container .login-form .gender .gender-option .option {
+    width: 15rem;
+    height: 3rem;
+  }
+  #login-form .login-container .login-form .gender .gender-option .option input {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+  #login-form .login-container .login-form .gender .gender-option .option label {
+    font-size: 1.8rem;
+  }
+  #login-form .login-container .login-form .accept input {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+  #login-form .login-container .login-form .accept label {
+    font-size: 1.8rem;
+  }
+  #login-form .login-container .login-form .create-account .btn {
+    height: 5rem;
+    font-size: 1.8rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  #login-form .login-container {
+    height: 55rem;
+  }
+  #login-form .login-container .login-form .float {
+    margin-bottom: 3rem;
+    height: 3.5rem;
+  }
+  #login-form .login-container .login-form .gender-title .title {
+    font-size: 2rem;
+  }
+  #login-form .login-container .login-form .gender .gender-option .option {
+    height: 5rem;
+  }
 }/*# sourceMappingURL=main.css.map */

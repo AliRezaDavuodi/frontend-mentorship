@@ -1,0 +1,124 @@
+@media screen and (min-width : 374px) {
+    #login-form {
+
+        .login-container {
+            width: 35rem;
+
+            .login-form {
+
+                .accept {
+
+                    label {
+                        font-size: 1.5rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width : 768px) {
+    #login-form {
+
+        .login-container {
+            width: 53rem;
+            height: 45rem;
+
+            .login-form {
+
+                .float {
+                    margin-top: 2rem;
+                    height: 3rem;
+
+                    &-label{
+                        top: 0.5rem;
+                    }
+
+                    &-label-active {
+                        left: 0.3rem !important;
+                        top: -2rem !important;
+                        font-size: 1.8rem !important;
+                        color: $balck !important;
+                        transition: 300ms;
+                    }
+                }
+
+                .gender {
+                    &-title {
+                        .title {
+                            font-size: 1.8rem;
+                        }
+                    }
+
+                    .gender-option {
+                        .option {
+                            width: 15rem;
+                            height: 3rem;
+
+                            input {
+                                width: 1.5rem;
+                                height: 1.5rem;
+                            }
+
+                            label {
+                                font-size: 1.8rem;
+                            }
+                        }
+                    }
+                }
+
+                .accept {
+
+                    input{
+                        width: 1.5rem;
+                        height: 1.5rem;
+                    }
+
+                    label {
+                        font-size: 1.8rem;
+                    }
+                }
+
+                .create-account{
+                    .btn{
+                        height: 5rem;
+                        font-size: 1.8rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width : 1024px) {
+    #login-form {
+
+        .login-container {
+            height: 55rem;
+
+            .login-form {
+
+                .float {
+                    margin-bottom: 3rem;
+                    height: 3.5rem;
+                    
+                }
+
+                .gender {
+                    &-title {
+                        .title {
+                            font-size: 2rem;
+                        }
+                    }
+
+                    .gender-option {
+                        .option {
+                            height: 5rem;
+                        }
+                    }
+                }
+
+            }
+        }
+    }
+}
