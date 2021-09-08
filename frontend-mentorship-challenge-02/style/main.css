@@ -1,9 +1,12 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
   font-size: 62.5%;
   scroll-behavior: smooth;
+  font-family: "Roboto", sans-serif;
+  text-transform: capitalize;
 }
 
 #login-form {
@@ -50,7 +53,7 @@
   outline: 0;
   padding: 2rem;
   position: relative;
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   text-align: center;
   border-radius: 3rem;
   transition: 300ms;
@@ -61,7 +64,7 @@
 #login-form .login-container .login-form .float-input:focus ~ .float-label {
   left: 2rem;
   top: -1.7rem;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   color: #000;
   text-align: start;
 }
@@ -69,7 +72,7 @@
   width: 20rem;
   text-align: center;
   position: absolute;
-  font-size: 2rem;
+  font-size: 1.8rem;
   left: 5rem;
   top: 1.2rem;
   transition: 300ms;
@@ -80,13 +83,13 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  justify-content: space-between !important;
   margin-top: 1.5rem;
   width: 80%;
   height: 10rem;
 }
 #login-form .login-container .login-form .gender-title {
-  font-size: 3.5rem;
+  font-weight: 400;
+  font-size: 3rem;
   width: 100%;
   height: 40%;
 }
@@ -114,7 +117,8 @@
   cursor: pointer;
 }
 #login-form .login-container .login-form .gender-option .option label {
-  font-size: 2rem;
+  font-size: 1.8rem;
+  font-weight: 400;
   margin-left: 0.8rem;
   cursor: pointer;
   color: #ccc;
@@ -122,4 +126,22 @@
 }
 #login-form .login-container .login-form .gender-option .option label:hover {
   color: #000;
+}
+#login-form .login-container .login-form .accept {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: flex-start;
+  width: 80%;
+  height: 5rem;
+}
+#login-form .login-container .login-form .accept input {
+  width: 2rem;
+  height: 1.6rem;
+}
+#login-form .login-container .login-form .accept label {
+  font-size: 1.8rem;
+  font-weight: 400;
+  margin-left: 1rem;
+  cursor: pointer;
 }/*# sourceMappingURL=main.css.map */
