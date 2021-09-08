@@ -11,7 +11,8 @@
 # FrontEnd-Mentorship-challenge-01
 **Travel Wesite**
 
-## About : this page includes four parts. header, dream trip that you can see popular travels, more explore that you can see some suggestions for travel, and footer.
+## About : 
+this page includes four parts. header, dream trip that you can see popular travels, more explore that you can see some suggestions for travel, and footer.
 
 ## Languages : 
 *Html - Css*
