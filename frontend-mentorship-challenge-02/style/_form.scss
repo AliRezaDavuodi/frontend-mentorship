@@ -26,6 +26,16 @@
                 margin: 1rem 0;
                 position: relative;
 
+                .valid {
+                    color: green;
+                    border: 1px solid green;
+                }
+
+                .unvalid {
+                    color: red;
+                    border: 1px solid red;
+                }
+
                 #date {
                     &::-webkit-datetime-edit {
                         color: $white;
@@ -36,7 +46,6 @@
                         color: $balck !important;
                     }
                 }
-
 
                 &-input {
                     @include fullWidth-height;
@@ -52,16 +61,14 @@
                         border-radius: 0;
                     }
 
+                }
 
-                    &:focus~.float-label {
-                        left: 0.3rem;
-                        top: 0.2rem;
-                        font-size: 1.2rem;
-                        color: $balck;
-                        text-align: start;
-
-                    }
-
+                &-label-active {
+                    left: 0.3rem !important;
+                    top: -1.5rem !important;
+                    font-size: 1.2rem !important;
+                    color: $balck !important;
+                    transition: 300ms ;
                 }
 
                 &-label {
@@ -76,14 +83,7 @@
                 }
 
 
-                .valid{
-                    color: green;
-                    border: 1px solid green;
-                }
-                .unvalid{
-                    color: red;
-                    border: 1px solid red;
-                }
+
 
             }
 
@@ -162,7 +162,7 @@
                 width: 80%;
                 height: 5rem;
 
-                .not-allow{
+                .not-allow {
                     @include fullWidth-height;
                     @include none;
                     @include font-size;
@@ -172,10 +172,9 @@
                     color: $white;
                     transition: 300ms;
                     opacity: 0.4;
-                    cursor: not-allowed;
                     opacity: 0.4;
                 }
-                
+
                 .active {
                     @include fullWidth-height;
                     @include none;

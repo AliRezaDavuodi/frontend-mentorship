@@ -40,6 +40,14 @@
   margin: 1rem 0;
   position: relative;
 }
+#login-form .login-container .login-form .float .valid {
+  color: green;
+  border: 1px solid green;
+}
+#login-form .login-container .login-form .float .unvalid {
+  color: red;
+  border: 1px solid red;
+}
 #login-form .login-container .login-form .float #date::-webkit-datetime-edit {
   color: #fff;
   -webkit-transition: 300ms;
@@ -64,12 +72,12 @@
 #login-form .login-container .login-form .float-input:focus {
   border-radius: 0;
 }
-#login-form .login-container .login-form .float-input:focus ~ .float-label {
-  left: 0.3rem;
-  top: 0.2rem;
-  font-size: 1.2rem;
-  color: #000;
-  text-align: start;
+#login-form .login-container .login-form .float-label-active {
+  left: 0.3rem !important;
+  top: -1.5rem !important;
+  font-size: 1.2rem !important;
+  color: #000 !important;
+  transition: 300ms;
 }
 #login-form .login-container .login-form .float-label {
   font-size: 1.8rem;
@@ -81,14 +89,6 @@
   top: 1.2rem;
   transition: 300ms;
   color: #ccc;
-}
-#login-form .login-container .login-form .float .valid {
-  color: green;
-  border: 1px solid green;
-}
-#login-form .login-container .login-form .float .unvalid {
-  color: red;
-  border: 1px solid red;
 }
 #login-form .login-container .login-form .gender {
   display: flex;
@@ -176,7 +176,6 @@
   color: #fff;
   transition: 300ms;
   opacity: 0.4;
-  cursor: not-allowed;
   opacity: 0.4;
 }
 #login-form .login-container .login-form .create-account .active {
