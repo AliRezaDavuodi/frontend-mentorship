@@ -48,6 +48,12 @@ function moveReplaceUp(event) {
 
 function moveReplaceDown(event) {
     if (!event.target.value) {
-        event.target.parentElement.children[1].classList.remove('float-label-active')
+        event.target.parentElement.children[1].classList.remove('float-label-active');
     }
+    else{
+        if (event.target.classList.contains("date-input")) {
+            event.target.classList.add('change-color')
+        }
+    }
+    
 }
