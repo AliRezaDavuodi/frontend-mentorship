@@ -1,0 +1,257 @@
+@media screen and (max-width : 480px) {
+    /* header */
+    .header-title{
+        width: 40rem;
+        text-align: center;
+    }
+
+
+    /* section : dream trip */
+
+    .dream-trip-title{
+        font-size: 3rem;
+    }
+
+    .collecion-preview-image{
+        width: 100%;
+    }
+
+    .collecion-preview-item {
+        width: 60rem;
+    }
+
+    .collecion-preview-item:last-child {
+        height: 25rem;
+    }
+
+    .learn-more h1{
+        font-size: 2rem;
+        text-align: center;
+    }
+    .learn-more p{
+        font-size: 1.2rem;
+        text-align: center;
+    }
+    .learn-more button{
+        align-self: center;
+    }
+
+    /* section : more to explore */
+
+    .explore-item {
+        width: 100%;
+    }
+
+    /* footer */
+    .list-item{
+        flex-direction: column;
+        align-items: flex-end;
+        margin-bottom: 1rem;
+    }
+
+    .blue-link i {
+        order: 2;
+    }
+    .blue-link p{
+        width: 8rem;
+        order: 1;
+        font-size: 1.1rem;
+    }
+    .nav-link{
+        margin: 1rem 0.5rem;
+    }
+    
+    .copy-right {
+        text-align: center;
+    }
+
+}
+
+@media screen and (min-width : 481px) {
+    
+        /* section : dream trip */
+    
+        .dream-trip-title{
+            font-size: 3rem;
+            text-align: start;
+        }
+    
+        .collecion-preview-item {
+            width: 25rem;
+        }
+        .collecion-preview-image{
+            width: 100%;
+        }
+    
+    
+        .collecion-preview-item:last-child {
+            height: 25rem;
+            
+        }
+    
+        .learn-more h1{
+            font-size: 2.2rem;
+            text-align: start;
+        }
+        .learn-more p{
+            font-size: 1.2rem;
+            text-align: start;
+        }
+        .learn-more button{
+            align-self: flex-start;
+            padding: 1rem 0;
+        }
+    
+        /* section : more to explore */
+    
+        .explore-item {
+            width: 75%;
+            flex: auto;
+        }
+        
+    
+        /* footer */
+        .list-item{
+            flex-direction: column;
+            align-items: flex-end;
+        }
+    
+        .blue-link i {
+            order: 2;
+        }
+        .blue-link p{
+            width: 8rem;
+            order: 1;
+            font-size: 1.1rem;
+        }
+        .nav-link{
+            margin: 1rem 0.5rem;
+        }
+        
+        .copy-right {
+            text-align: center;
+        }
+    
+    }
+    
+@media screen and (min-width : 630px) {
+/* section : more to explore */
+.explore-item {
+    width: 45%;
+}
+
+}
+
+
+
+
+@media screen and (min-width : 769px) {
+
+    /* section : dream trip */
+
+    .dream-trip-title{
+        font-size: 3rem;
+    }
+
+    .collecion-preview-item {
+        width: 30rem;
+    }
+    .collecion-preview-image{
+        width: 100%;
+    }
+
+
+    .collecion-preview-item:last-child {
+        height: 25rem !important;
+    }
+
+    .learn-more h1{
+        font-size: 2.2rem;
+        text-align: start;
+    }
+    .learn-more p{
+        font-size: 1.2rem;
+        text-align: start;
+    }
+    .learn-more button{
+        align-self: flex-start;
+        padding: 1rem 0;
+    }
+
+    /* section : more to explore */
+
+    .explore-item {
+        width: 45%;
+        flex: auto;
+    }
+    
+
+    /* footer */
+    .list-item{
+        flex-direction: row-reverse;
+    }
+
+    .blue-link{
+        margin-top: 1rem;
+    }
+
+
+    .blue-link i {
+        order: 2;
+    }
+    .blue-link p{
+        width: 8rem;
+        order: 1;
+        font-size: 1.1rem;
+    }
+    .nav-link{
+        margin: 1rem 0.5rem;
+    }
+    
+    .copy-right {
+        text-align: center;
+    }
+}
+
+@media screen and (min-width : 1100px) {
+    /* dream trip */
+    .collecion-preview-item:last-child {
+        height: 45rem !important;
+    }
+
+}
+
+@media screen and (min-width : 1150px) {
+
+     /* section : more to explore */
+
+     .explore-item {
+        width: 30%;
+        flex: auto;
+    }
+
+   
+    
+
+
+
+
+
+}
+@media screen and (max-width : 1280px) {
+
+/* dream trip */
+.collecion-preview-item:last-child {
+    height: 50rem;
+}
+
+.learn-more h1{
+    font-size: 3.5rem;
+}
+
+.learn-more p{
+    font-size: 1.5rem;
+}
+
+
+}

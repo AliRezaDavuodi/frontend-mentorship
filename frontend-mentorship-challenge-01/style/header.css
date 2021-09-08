@@ -1,0 +1,66 @@
+@import "colors.css";
+@import "font.css";
+
+#header {
+    width: 100%;
+    height: 100vh;
+}
+
+.navbar {
+    width: 100%;
+    height: 7%;
+    background-color: var(--blueColor);
+    color: var(--white);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 2.1rem;
+    padding: 1rem 5rem;
+}
+
+.user-icon {
+    color: var(--white);
+}
+
+#header-image {
+    width: 100%;
+    height: 93%;
+    background: linear-gradient(rgba(0, 0, 0, .8), transparent), url("../img/hero.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+}
+
+.header-content {
+    width: 60rem;
+    height: 30rem;
+    padding: 2rem 8rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+}
+
+.header-title{
+    width: 30rem;
+    color: var(--white);
+    font-size: 2.5rem;
+    text-align: center;
+}
+
+.join-btn{
+    width: 11rem;
+    height: 3rem;
+    margin: 1rem 0;
+    border-radius: 0 1rem;
+    transition: 0.3s;
+}
+
+.join-btn:hover {
+    background-color: transparent;
+    color: var(--white);
+    border: 0.1rem solid var(--white);
+    border-radius: 0;
+}
