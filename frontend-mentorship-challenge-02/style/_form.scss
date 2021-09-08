@@ -7,8 +7,9 @@
 
     .login-container {
         width: 400px;
-        height: 570px;
+        height: 530px;
         background-color: lightBlue;
+        border-radius: 3rem;
 
         .login-form {
             @include fullWidth-height;
@@ -130,10 +131,12 @@
                 justify-content: flex-start;
                 width: 80%;
                 height: 5rem;
+                margin-top: 1.5rem;
 
                 input {
                     width: 2rem;
                     height: 1.6rem;
+                    margin-left: 0.5rem;
                 }
 
                 label {
@@ -142,8 +145,37 @@
                     margin-left: 1rem;
                     cursor: pointer;
                 }
-
             }
+
+            .create-account{
+                margin-top: 1.5rem;
+                width: 80%;
+                height: 5rem;
+
+                button{
+                    @include fullWidth-height;
+                    @include none;
+                    padding: 1rem 3rem;
+                    font-size: 1.8rem;
+                    border-radius: 1.5rem;
+                    cursor: pointer;
+                    background-color: #3498DB;
+                    color: #fff;
+                    transition: 300ms;
+
+                    &:hover{
+                        border: 1px solid #3498DB;
+                        border-radius: 0;
+                        background-color: #fff;
+                        color: #3498DB;
+                    }
+
+                    &:active{
+                        transform: scale(0.9);
+                    }
+                }
+            }
+
 
         }
     }
