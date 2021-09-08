@@ -1,11 +1,12 @@
 const inputBox = document.querySelectorAll('.float');
 const inputBoxArr = Array.from(inputBox);
-
+const createAccountBtn = document.querySelector('.btn')
+const checkBox = document.getElementById('accept')
 inputBoxArr.map(ele => ele.addEventListener('keyup', validate))
 
 
+
 function validate(elem) {
-    // console.log(elem.target.parentElement , 'im work ')
 
     // check value or it's length
     if (elem.target.value && elem.target.value.length >= 10) {
@@ -17,17 +18,10 @@ function validate(elem) {
         elem.target.classList.remove('valid')
     }
 
-
-    // show or hide text
-
-    // clear inputs
-
 }
 
 
-
-
-
-
-
-// console.log(box[0].children[0])
+checkBox.addEventListener('click', () => {
+    createAccountBtn.classList.toggle('not-allow')
+    createAccountBtn.classList.toggle('active')
+})

@@ -20,7 +20,7 @@
                 <form action="#" class="login-form">
 
                     <div class="float">
-                        <input   type="text" id="fullname" class="float-input">
+                        <input  required type="text" id="fullname" class="float-input">
                         <label for="fullname" class="float-label">Full Name</label>
                     </div>
 
@@ -30,7 +30,7 @@
                     </div>
 
                     <div class="float">
-                        <input   type="date" id="date" class="float-input">
+                        <input required  type="date" id="date" class="float-input">
                         <label for="date" class="float-label">Date Of birth</label>
                     </div>
 
@@ -55,12 +55,12 @@
                     </article>
 
                     <div class="accept">
-                        <input type="checkbox" name="accept" id="accept">
+                        <input type="checkbox" name="accept" id="accept" areaCheck = "false">
                         <label for="accept"> i accept the terms & conditions </label>
                     </div>
 
                     <div class="create-account">
-                        <button type="submit"> create account </button>
+                        <button type="submit" class="not-allow btn"> create account </button>
                     </div>
 
                 </form>

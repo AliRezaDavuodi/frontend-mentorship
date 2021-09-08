@@ -163,7 +163,23 @@
   width: 80%;
   height: 5rem;
 }
-#login-form .login-container .login-form .create-account button {
+#login-form .login-container .login-form .create-account .not-allow {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  outline: 0;
+  font-size: 1.8rem;
+  font-weight: 500;
+  padding: 1rem 3rem;
+  border-radius: 1.5rem;
+  background-color: #3eadcf;
+  color: #fff;
+  transition: 300ms;
+  opacity: 0.4;
+  cursor: not-allowed;
+  opacity: 0.4;
+}
+#login-form .login-container .login-form .create-account .active {
   width: 100%;
   height: 100%;
   border: 0;
@@ -177,12 +193,12 @@
   color: #fff;
   transition: 300ms;
 }
-#login-form .login-container .login-form .create-account button:hover {
+#login-form .login-container .login-form .create-account .active:hover {
   border: 1px solid #3eadcf;
   border-radius: 0;
   background-color: #fff;
   color: #3eadcf;
 }
-#login-form .login-container .login-form .create-account button:active {
+#login-form .login-container .login-form .create-account .active:active {
   transform: scale(0.9);
 }/*# sourceMappingURL=main.css.map */
