@@ -25,7 +25,8 @@ this page includes four parts. header, dream trip that you can see popular trave
 **Travel With Us Sign In**
 
 ## About : 
-sign in page that incldes *Full-Name email date-Birth gender*
+
+Login page that contains your *first and last name, date of birth and gender*
 
 ## Languages : 
 *Html - Css - Scss - Js*
