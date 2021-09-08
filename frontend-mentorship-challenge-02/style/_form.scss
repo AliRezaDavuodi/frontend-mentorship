@@ -22,16 +22,15 @@
                 margin: 1rem 0;
                 position: relative;
 
-                #date{
+                #date {
                     &::-webkit-datetime-edit {
                         color: #fff;
                         transition: 300ms;
                     }
 
-                    &:focus::-webkit-datetime-edit 
-                    {
-                           color: #000 !important;
-                   }
+                    &:focus::-webkit-datetime-edit {
+                        color: #000 !important;
+                    }
                 }
 
 
@@ -44,7 +43,8 @@
                     text-align: center;
                     border-radius: 3rem;
                     transition: 300ms;
-                    &:focus{
+
+                    &:focus {
                         border-radius: 0;
                     }
 
@@ -55,7 +55,7 @@
                         font-size: 1.2rem;
                         color: #000;
                         text-align: start;
-                        
+
                     }
 
                 }
@@ -72,6 +72,60 @@
                 }
 
             }
+
+            .gender {
+                @include flexbox;
+                flex-direction: column;
+                justify-content: space-between !important;
+                margin-top: 1.5rem;
+                width: 80%;
+                height: 10rem;
+
+                &-title {
+                    font-size: 3.5rem;
+                    width: 100%;
+                    height: 40%;
+                }
+
+                &-option {
+                    @include flexbox;
+                    justify-content: flex-start !important;
+                    width: 100%;
+                    height: 55%;
+
+
+                    .option {
+                        @include flexbox;
+                        width: 20rem;
+                        margin: 0.5rem 0.5rem;
+                        padding: 1.5rem 1rem;
+                        border-radius: 1.5rem;
+                        background-color: #fff;
+
+                        input {
+                            width: 1.5rem;
+                            height: 1.5rem;
+                            cursor: pointer;
+                        }
+
+                        label {
+                            font-size: 2rem;
+                            margin-left: 0.8rem;
+                            cursor: pointer;
+                            color: #ccc;
+                            transition: 300ms;
+
+                            &:hover{
+                                color: #000;
+                            }
+                        }
+
+
+                    }
+
+                }
+            }
+
         }
 
     }

@@ -74,4 +74,52 @@
   top: 1.2rem;
   transition: 300ms;
   color: #ccc;
+}
+#login-form .login-container .login-form .gender {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between !important;
+  margin-top: 1.5rem;
+  width: 80%;
+  height: 10rem;
+}
+#login-form .login-container .login-form .gender-title {
+  font-size: 3.5rem;
+  width: 100%;
+  height: 40%;
+}
+#login-form .login-container .login-form .gender-option {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: flex-start !important;
+  width: 100%;
+  height: 55%;
+}
+#login-form .login-container .login-form .gender-option .option {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 20rem;
+  margin: 0.5rem 0.5rem;
+  padding: 1.5rem 1rem;
+  border-radius: 1.5rem;
+  background-color: #fff;
+}
+#login-form .login-container .login-form .gender-option .option input {
+  width: 1.5rem;
+  height: 1.5rem;
+  cursor: pointer;
+}
+#login-form .login-container .login-form .gender-option .option label {
+  font-size: 2rem;
+  margin-left: 0.8rem;
+  cursor: pointer;
+  color: #ccc;
+  transition: 300ms;
+}
+#login-form .login-container .login-form .gender-option .option label:hover {
+  color: #000;
 }/*# sourceMappingURL=main.css.map */
