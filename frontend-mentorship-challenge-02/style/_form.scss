@@ -1,0 +1,78 @@
+@import "mixin";
+
+#login-form {
+    @include flexbox;
+    width: 100%;
+    height: 100vh;
+
+    .login-container {
+        width: 400px;
+        height: 570px;
+        background-color: lightBlue;
+
+        .login-form {
+            @include fullWidth-height;
+            @include flexbox;
+            flex-direction: column;
+
+            .float {
+                @include flexbox;
+                width: 80%;
+                height: 5rem;
+                margin: 1rem 0;
+                position: relative;
+
+                #date{
+                    &::-webkit-datetime-edit {
+                        color: #fff;
+                        transition: 300ms;
+                    }
+
+                    &:focus::-webkit-datetime-edit 
+                    {
+                           color: #000 !important;
+                   }
+                }
+
+
+                &-input {
+                    @include fullWidth-height;
+                    @include none;
+                    padding: 2rem;
+                    position: relative;
+                    font-size: 1.5rem;
+                    text-align: center;
+                    border-radius: 3rem;
+                    transition: 300ms;
+                    &:focus{
+                        border-radius: 0;
+                    }
+
+
+                    &:focus~.float-label {
+                        left: 2rem;
+                        top: -1.7rem;
+                        font-size: 1.2rem;
+                        color: #000;
+                        text-align: start;
+                        
+                    }
+
+                }
+
+                &-label {
+                    width: 20rem;
+                    text-align: center;
+                    position: absolute;
+                    font-size: 2rem;
+                    left: 5rem;
+                    top: 1.2rem;
+                    transition: 300ms;
+                    color: #ccc;
+                }
+
+            }
+        }
+
+    }
+}
