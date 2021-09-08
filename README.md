@@ -13,7 +13,7 @@
 
 ## About : this page includes four parts. header, dream trip that you can see popular travels, more explore that you can see some suggestions for travel, and footer.
 
-##Languages : 
+## Languages : 
 *Html - Css*
 
 ## Figma Link :
