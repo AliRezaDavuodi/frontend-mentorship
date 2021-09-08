@@ -1,4 +1,5 @@
 @import "mixin";
+@import "colors";
 
 #login-form {
     @include flexbox;
@@ -8,8 +9,10 @@
     .login-container {
         width: 400px;
         height: 530px;
-        background-color: lightBlue;
         border-radius: 3rem;
+        background-color: #abe9cd;
+        background-image: linear-gradient(315deg, $lightBlue 0%, $darkBlue 74%);
+
 
         .login-form {
             @include fullWidth-height;
@@ -25,12 +28,12 @@
 
                 #date {
                     &::-webkit-datetime-edit {
-                        color: #fff;
+                        color: $white;
                         transition: 300ms;
                     }
 
                     &:focus::-webkit-datetime-edit {
-                        color: #000 !important;
+                        color: $balck !important;
                     }
                 }
 
@@ -38,9 +41,9 @@
                 &-input {
                     @include fullWidth-height;
                     @include none;
+                    @include font-size;
                     padding: 2rem;
                     position: relative;
-                    font-size: 1.8rem;
                     text-align: center;
                     border-radius: 3rem;
                     transition: 300ms;
@@ -51,10 +54,10 @@
 
 
                     &:focus~.float-label {
-                        left: 2rem;
-                        top: -1.7rem;
-                        font-size: 1.4rem;
-                        color: #000;
+                        left: 0.3rem;
+                        top: 0.2rem;
+                        font-size: 1.2rem;
+                        color: $balck;
                         text-align: start;
 
                     }
@@ -62,14 +65,24 @@
                 }
 
                 &-label {
-                    width: 20rem;
-                    text-align: center;
+                    @include font-size;
+                    width: 100%;
+                    text-align: start;
                     position: absolute;
-                    font-size: 1.8rem;
-                    left: 5rem;
+                    left: 1rem;
                     top: 1.2rem;
                     transition: 300ms;
-                    color: #ccc;
+                    color: $lightgray;
+                }
+
+
+                .valid{
+                    color: green;
+                    border: 1px solid green;
+                }
+                .unvalid{
+                    color: red;
+                    border: 1px solid red;
                 }
 
             }
@@ -82,8 +95,7 @@
                 height: 10rem;
 
                 &-title {
-                    font-weight: 400;
-                    font-size: 3rem;
+                    font-size: 2.7rem;
                     width: 100%;
                     height: 40%;
                 }
@@ -101,7 +113,7 @@
                         margin: 0.5rem 0.5rem;
                         padding: 1.5rem 1rem;
                         border-radius: 1.5rem;
-                        background-color: #fff;
+                        background-color: $white;
 
                         input {
                             width: 1.5rem;
@@ -110,15 +122,14 @@
                         }
 
                         label {
-                            font-size: 1.8rem;
-                            font-weight: 400;
+                            @include font-size;
                             margin-left: 0.8rem;
                             cursor: pointer;
-                            color: #ccc;
+                            color: $lightgray;
                             transition: 300ms;
 
                             &:hover {
-                                color: #000;
+                                color: $balck;
                             }
                         }
                     }
@@ -140,37 +151,36 @@
                 }
 
                 label {
-                    font-size: 1.8rem;
-                    font-weight: 400;
+                    @include font-size;
                     margin-left: 1rem;
                     cursor: pointer;
                 }
             }
 
-            .create-account{
+            .create-account {
                 margin-top: 1.5rem;
                 width: 80%;
                 height: 5rem;
 
-                button{
+                button {
                     @include fullWidth-height;
                     @include none;
+                    @include font-size;
                     padding: 1rem 3rem;
-                    font-size: 1.8rem;
                     border-radius: 1.5rem;
                     cursor: pointer;
-                    background-color: #3498DB;
-                    color: #fff;
+                    background-color: $darkBlue;
+                    color: $white;
                     transition: 300ms;
 
-                    &:hover{
-                        border: 1px solid #3498DB;
+                    &:hover {
+                        border: 1px solid $darkBlue;
                         border-radius: 0;
-                        background-color: #fff;
-                        color: #3498DB;
+                        background-color: $white;
+                        color: $darkBlue;
                     }
 
-                    &:active{
+                    &:active {
                         transform: scale(0.9);
                     }
                 }
