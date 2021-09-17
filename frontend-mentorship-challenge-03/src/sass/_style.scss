@@ -1,0 +1,49 @@
+@import 'mixin';
+
+#header{
+    height: 100vh;
+    background-image:linear-gradient(to right bottom, 
+    rgba($colorBlack, 0.5),
+    rgba($colorBlack, 0.5)
+    ),
+    url(../img/hero.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.header {
+        @include fullWidthHeight;
+
+    .heading-primary{
+        position: absolute;
+        left: 2rem;
+        top: 0;
+        font-size: 4rem;
+        color: $darkGreenColor;
+        
+    }
+
+    &__btn-box{
+        @include flexBox(center);
+        position: absolute;
+        top: 2rem;
+        right: 2rem;
+
+         .header__btn{
+            background-color: #fff;
+
+            span{
+                color: $darkGreenColor;
+                font-weight: 400;
+            }
+
+            i{
+                color: $darkRedColor;
+            }
+        }
+        
+    }
+
+}

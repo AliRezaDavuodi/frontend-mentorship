@@ -1,0 +1,10 @@
+@mixin fullWidthHeight {
+    width: 100%;
+    height: 100%;
+}
+
+@mixin flexBox($just) {
+    display: flex;
+    align-items: center;
+    justify-content: $just;
+}

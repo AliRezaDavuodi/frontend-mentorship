@@ -1,0 +1,37 @@
+@import 'colors';
+*,
+*::after,
+*::before{
+    padding: 0;
+    margin: 0;
+    box-sizing: inherit;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    line-height: 1.7;
+    font-family: 'Raleway', sans-serif;
+    text-transform: capitalize;
+}
+
+.btn{
+    padding: 0.5rem 1.5rem;   
+            font-size: 1.5rem;
+            display: inline-block;
+            border-radius: 10rem;
+            text-decoration: none;
+            color: $colorBlack;
+
+            span{
+                margin-right:0.5rem ;
+            }
+
+            i{
+                font-size: 2rem;
+            }
+}

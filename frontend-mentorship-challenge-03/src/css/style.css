@@ -11,10 +11,65 @@ html {
 }
 
 body {
-  padding: 1.5rem 2rem;
   box-sizing: border-box;
   scroll-behavior: smooth;
   line-height: 1.7;
+  font-family: "Raleway", sans-serif;
+  text-transform: capitalize;
+}
+
+.btn {
+  padding: 0.5rem 1.5rem;
+  font-size: 1.5rem;
+  display: inline-block;
+  border-radius: 10rem;
+  text-decoration: none;
+  color: #000;
+}
+.btn span {
+  margin-right: 0.5rem;
+}
+.btn i {
+  font-size: 2rem;
+}
+
+#header {
+  height: 100vh;
+  background-image: linear-gradient(to right bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/hero.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.header {
+  width: 100%;
+  height: 100%;
+}
+.header .heading-primary {
+  position: absolute;
+  left: 2rem;
+  top: 0;
+  font-size: 4rem;
+  color: #16A085;
+}
+.header__btn-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+}
+.header__btn-box .header__btn {
+  background-color: #fff;
+}
+.header__btn-box .header__btn span {
+  color: #16A085;
+  font-weight: 400;
+}
+.header__btn-box .header__btn i {
+  color: #B75D5D;
 }
 
 /*# sourceMappingURL=style.css.map */
