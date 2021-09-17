@@ -1,12 +1,12 @@
 @import 'mixin';
+@import 'animation';
 
-#header{
+#header {
     height: 100vh;
-    background-image:linear-gradient(to right bottom, 
-    rgba($colorBlack, 0.5),
-    rgba($colorBlack, 0.5)
-    ),
-    url(../img/hero.jpg);
+    background-image: linear-gradient(to right bottom,
+            rgba($colorBlack, 0.5),
+            rgba($colorBlack, 0.5)),
+        url(../img/hero.jpg);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -14,36 +14,49 @@
 }
 
 .header {
-        @include fullWidthHeight;
+    @include fullWidthHeight;
 
-    .heading-primary{
+    .heading-primary {
         position: absolute;
         left: 2rem;
         top: 0;
         font-size: 4rem;
         color: $darkGreenColor;
-        
+        animation: moveRight 0.5s 0.5s ease-out backwards;
+        text-shadow: 0 0.5rem 1.5rem $colorBlack;
     }
 
-    &__btn-box{
+    &__btn-box {
         @include flexBox(center);
         position: absolute;
-        top: 2rem;
+        top: 1.5rem;
         right: 2rem;
+        animation: moveUp 0.5s 0.2s ease-out backwards;
 
-         .header__btn{
+        .header__btn {
             background-color: #fff;
+            box-shadow: 0 1rem 2rem $colorBlack;
+            transition: all .3s;
 
-            span{
+            &:hover {
+                transform: translateY(-0.2rem);
+                box-shadow: 0 0.5rem 1rem $colorBlack;
+            }
+            &:active {
+                transform: translateY(-0.06rem);
+                box-shadow: 0 0.5rem 1rem $colorBlack;
+            }
+
+            span {
                 color: $darkGreenColor;
                 font-weight: 400;
             }
 
-            i{
+            i {
                 color: $darkRedColor;
             }
         }
-        
+
     }
 
 }

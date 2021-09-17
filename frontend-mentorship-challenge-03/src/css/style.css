@@ -18,21 +18,50 @@ body {
   text-transform: capitalize;
 }
 
-.btn {
-  padding: 0.5rem 1.5rem;
+.btn:link,
+.btn:visited {
+  padding: 1rem 1.5rem;
   font-size: 1.5rem;
   display: inline-block;
   border-radius: 10rem;
   text-decoration: none;
   color: #000;
 }
-.btn span {
+.btn:link span,
+.btn:visited span {
   margin-right: 0.5rem;
 }
-.btn i {
+.btn:link i,
+.btn:visited i {
   font-size: 2rem;
 }
 
+@keyframes moveUp {
+  0% {
+    opacity: 0;
+    transform: translateY(2rem);
+  }
+  80% {
+    transform: translateY(-0.5rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes moveRight {
+  0% {
+    opacity: 0;
+    transform: translatex(-2rem);
+  }
+  80% {
+    transform: translatex(0.5rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 #header {
   height: 100vh;
   background-image: linear-gradient(to right bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/hero.jpg);
@@ -52,17 +81,30 @@ body {
   top: 0;
   font-size: 4rem;
   color: #16A085;
+  animation: moveRight 0.5s 0.5s ease-out backwards;
+  text-shadow: 0 0.5rem 1.5rem #000;
 }
 .header__btn-box {
   display: flex;
   align-items: center;
   justify-content: center;
   position: absolute;
-  top: 2rem;
+  top: 1.5rem;
   right: 2rem;
+  animation: moveUp 0.5s 0.2s ease-out backwards;
 }
 .header__btn-box .header__btn {
   background-color: #fff;
+  box-shadow: 0 1rem 2rem #000;
+  transition: all 0.3s;
+}
+.header__btn-box .header__btn:hover {
+  transform: translateY(-0.2rem);
+  box-shadow: 0 0.5rem 1rem #000;
+}
+.header__btn-box .header__btn:active {
+  transform: translateY(-0.06rem);
+  box-shadow: 0 0.5rem 1rem #000;
 }
 .header__btn-box .header__btn span {
   color: #16A085;
