@@ -80,7 +80,7 @@ body {
   top: 0;
   font-size: 4rem;
   color: #16A085;
-  animation: moveRight 0.5s 0.5s ease-out backwards;
+  animation: moveRight 0.5s 0.6s ease-out backwards;
   text-shadow: 0 0.5rem 1.5rem #000;
 }
 .header__btn-box {
@@ -148,6 +148,7 @@ body {
   justify-content: center;
   margin-right: 0.2rem;
   position: relative;
+  animation: moveUp 0.5s 0.75s ease-out backwards;
 }
 #form-section .form__panel form .wrapper .btn-search {
   pointer-events: painted;
