@@ -1,0 +1,70 @@
+@media screen and (min-width: 375px) {
+
+    html{
+        font-size: 50%;
+    }
+
+    #form-section .form__panel form{
+        flex-direction: column-reverse;
+    }
+
+    #form-section .form__panel form .wrapper{
+        margin-top: 3.5rem;
+    }
+
+    #form-section .form__panel form .wrapper .btn-search{
+        padding: 1.5rem 7rem;
+        margin-top: 1rem;
+    }
+
+    #form-section .form__panel form .wrapper label{
+        bottom: -3.5rem;
+    }
+}
+@media screen and (min-width: 768px) {
+
+    html{
+        font-size: 62.5%;
+    }
+
+    #form-section .form__panel form{
+        flex-direction: column-reverse;
+    }
+
+    #form-section .form__panel form .wrapper{
+        margin-top: 3.5rem;
+    }
+
+    #form-section .form__panel form .wrapper .btn-search{
+        padding: 1.5rem 7rem;
+        margin-top: 1rem;
+    }
+
+    #form-section .form__panel form .wrapper label{
+        bottom: -3.5rem;
+    }
+}
+@media screen and (min-width: 1024px) {
+   
+    #form-section .form__panel {
+        width: 80rem;
+    }
+
+
+    #form-section .form__panel form{
+        flex-direction: row-reverse;
+    }
+
+    /* #form-section .form__panel form .wrapper{
+        margin-left: 10rem;
+    } */
+
+    #form-section .form__panel form .wrapper .btn-search{
+        padding: 1.5rem 3rem;
+        margin-top: 1rem;
+    }
+
+    #form-section .form__panel form .wrapper label{
+        bottom: -3.5rem;
+    }
+}
