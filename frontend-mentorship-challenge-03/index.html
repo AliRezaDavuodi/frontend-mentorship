@@ -33,36 +33,51 @@
 
         <section id="form-section">
             <div class="form">
-                <div class="form__box">
-                    <div class="form__panel">
-                        <form action="#">
-                            <div class="form__panel-check-ou">
-                                <label for="check-out">
-                                    <div class="form__check-out">
-                                        <input type="date" id="check-out">
-                                    </div>
-                                    <span>check out</span>
-                                </label>
+                <div class="form__panel">
+                    <form action="#">
+                        <div class="search-btn wrapper">
+                            <a href="#" class="btn btn-search">
+                                search
+                            </a>
+                        </div>
+                        <div class="form__panel-check-out wrapper">
+                            <div class="input__box">
+                                <input required  type="date" id="check-out" class="inputs">
                             </div>
-                            <div class="form__panel-cehck-in">
-                                <label for="check-out">
-                                    <div class="form__check-out">
-                                        <input type="date" id="check-out">
-                                    </div>
-                                    <span>check in</span>
-                                </label>
+                            <label for="check-out">
+                                <span>check out</span>
+                            </label>
+                        </div>
+                      
+                        <div class="form__panel-check-in wrapper">
+                            <div class="input__box">
+                                <input required type="date" id="check-in" class="inputs">
                             </div>
-                            <div class="form__panel-select">
-                                <select name="country">
-                                    <option value="chose" selected>select a country</option>
+                            <label for="check-in">
+                                <span>
+                                    check in
+                                </span>
+                            </label>
+                        </div>
+                      
+                        <div class="form__panel-select wrapper">
+                            <div class="input__box">
+                                <select required name="country" id="country" class="select inputs">
+                                    <option value="chose">select a country</option>
                                     <option value="Turky">Turky</option>
                                     <option value="Australia">Australia</option>
                                     <option value="Belgium">Belgium</option>
                                     <option value="Netherlands">Netherlands</option>
                                 </select>
                             </div>
-                        </form>
-                    </div>
+                            <label for="country">
+                                <span>
+                                    select country
+                                </span>
+                            </label>
+                        </div>
+
+                    </form>
                 </div>
             </div>
         </section>

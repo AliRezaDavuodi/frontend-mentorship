@@ -37,11 +37,14 @@
             background-color: #fff;
             box-shadow: 0 1rem 2rem $colorBlack;
             transition: all .3s;
+            padding: 1rem 1.5rem;
+
 
             &:hover {
                 transform: translateY(-0.2rem);
                 box-shadow: 0 0.5rem 1rem $colorBlack;
             }
+
             &:active {
                 transform: translateY(-0.06rem);
                 box-shadow: 0 0.5rem 1rem $colorBlack;
@@ -59,4 +62,99 @@
 
     }
 
+}
+
+#form-section {
+    @include fullWidthHeight;
+    position: absolute;
+    top: 0;
+    padding: 3rem;
+    pointer-events: none;
+
+    .form {
+        @include fullWidthHeight;
+        @include flexBox(center);
+
+        &__panel {
+            width: 60%;
+            height: 70px;
+
+            form {
+                @include flexBox(space-between);
+                flex-direction: row-reverse;
+                // background-color: orange;
+                height: 100%;
+
+                .wrapper {
+                    width: 32rem;
+                    height: 100%;
+                    @include flexBox(center);
+                    // background-color: #fff;
+                    margin-right: 0.2rem;
+                    position: relative;
+
+                    .btn-search {
+                        pointer-events: painted;
+                        background-color: $darkGreenColor;
+                        padding: 1rem 3rem;
+                        color: $colorWhite;
+                        box-shadow: 0 1rem 2rem $colorBlack;
+                        transition: all .3s;
+
+                        &:hover {
+                            transform: translateY(-0.2rem);
+                            box-shadow: 0 0.5rem 1rem $colorBlack;
+                        }
+            
+                        &:active {
+                            transform: translateY(-0.06rem);
+                            box-shadow: 0 0.5rem 1rem $colorBlack;
+                        }
+
+                    }
+ 
+                    .input__box{
+                        pointer-events: painted;
+                        position: relative;
+
+                        .inputs {
+                            padding: 1.5rem 1rem;
+                            border: 0;
+                            outline: 0;
+                            color: transparent;
+                            background-color: transparent;
+                            border-bottom: 1px solid $colorWhite;
+                            font-size: 1.6rem;
+                            font-weight: 700;
+
+
+                            &:focus,
+                            &:valid {
+                                color: $darkGreenColor;
+                            }
+                        }
+
+                        option{
+                            background-color: $colorWhite;
+                        }
+
+                    }
+
+                    label{
+                        width: 100%;
+                        position: absolute;
+                        font-size: 1.8rem;
+                        bottom: -2.5rem;
+                        left:0rem;
+                        color: $colorWhite;
+                        text-align: center;
+
+                        span{
+                            @include fullWidthHeight;
+                        }
+                    }
+                }
+            }
+        }
+    }
 }

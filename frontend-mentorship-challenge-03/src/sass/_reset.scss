@@ -22,12 +22,12 @@ body {
 
 .btn:link,
 .btn:visited {
-    padding: 1rem 1.5rem;
-    font-size: 1.5rem;
+    font-size: 1.7rem;
     display: inline-block;
     border-radius: 10rem;
     text-decoration: none;
     color: $colorBlack;
+    
 
     span {
         margin-right: 0.5rem;
@@ -38,6 +38,3 @@ body {
     }
 }
 
-.hidden{
-    display: none;
-}
