@@ -36,6 +36,10 @@ body {
   font-size: 2rem;
 }
 
+.hidden {
+  display: none;
+}
+
 @keyframes moveUp {
   0% {
     opacity: 0;

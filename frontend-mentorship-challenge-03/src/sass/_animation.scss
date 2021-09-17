@@ -1,0 +1,28 @@
+@keyframes moveUp {
+    0%{
+        opacity: 0;
+        transform: translateY(2rem);
+    }
+    80%{
+        transform: translateY(-0.5rem);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+    
+}
+@keyframes moveRight {
+    0%{
+        opacity: 0;
+        transform: translatex(-2rem);
+    }
+    80%{
+        transform: translatex(0.5rem);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+    
+}
