@@ -74,6 +74,7 @@ button {
 #todo .todo__box {
   min-width: 40rem;
   min-height: 35rem;
+  max-height: 52rem;
   display: flex;
   align-items: center;
   justify-content: none;
@@ -183,6 +184,22 @@ button {
 }
 #todo .todo__box .todo__items .todo__list-item .todo__task-btn .btn-delete:hover {
   background-color: #ff4342;
+}
+
+@media screen and (max-width: 375px) {
+  html {
+    font-size: 52%;
+  }
+}
+@media screen and (min-width: 768px) {
+  html {
+    font-size: 60%;
+  }
+}
+@media screen and (min-width: 1024px) {
+  html {
+    font-size: 62.5%;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -30,7 +30,8 @@
     //functions ----------------------------------------------
     function addItem() {
 
-        // create id
+       if (items.length < 8) {
+            // create id
         id = items.length ? items[items.length - 1].itemId + 1 : 0;
 
         // get value from main input
@@ -55,12 +56,16 @@
             // Update Ui
             updateUi();
 
-            // clear main input field
+            // clear main input field and focus
             mainInput.value = '';
+            mainInput.focus();
 
         } else {
             alert('Please Write Something To Add')
         }
+       }else{
+           alert('you add more ...')
+       }
     }
 
     function deleteItem(e) {

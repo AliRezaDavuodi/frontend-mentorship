@@ -30,6 +30,7 @@
 
     .todo__box {
         @include width-height(40rem, 35rem);
+        max-height: 52rem;
         @include flexBox(none, column);
         position: relative;
         background-color: rgba($color: $white, $alpha: .3);
