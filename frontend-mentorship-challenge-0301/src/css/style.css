@@ -1,3 +1,111 @@
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: inherit;
+}
 
+html {
+  font-size: 62.5%;
+}
+
+body {
+  box-sizing: border-box;
+  line-height: 1.7;
+  scroll-behavior: smooth;
+  background-color: #ccc;
+  text-transform: capitalize;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+input,
+button {
+  border: 0;
+  outline: 0;
+}
+
+#todo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  height: 100vh;
+  background-image: linear-gradient(to right bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../img/hero.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+#todo .todo__box {
+  min-width: 40rem;
+  min-height: 35rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  position: relative;
+  background-color: rgba(255, 255, 255, 0.3);
+  padding: 0.5rem;
+  border-radius: 2rem;
+}
+#todo .todo__box .todo__header {
+  font-size: 4rem;
+}
+#todo .todo__box .todo__form-box {
+  min-width: 100%;
+  min-height: 3rem;
+  box-sizing: border-box;
+  padding: 1rem 0.5rem;
+  position: absolute;
+  top: 7rem;
+}
+#todo .todo__box .todo__form-box .todo__form {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+}
+#todo .todo__box .todo__form-box .todo__form .todo__form-input {
+  min-width: 100%;
+  min-height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+}
+#todo .todo__box .todo__form-box .todo__form .todo__form-input .todo__input {
+  min-width: 80%;
+  min-height: 100%;
+  padding: 1rem;
+  background-color: transparent;
+  border-bottom: 1px solid #000;
+}
+#todo .todo__box .todo__form-box .todo__form .todo__form-label {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  font-size: 1.8rem;
+}
+#todo .todo__box .todo__form-box .todo__form .btn {
+  padding: 0.4rem 1.7rem;
+  color: #fff;
+  margin-left: 0.5rem;
+  border-radius: 1rem;
+  font-size: 1.6rem;
+}
+#todo .todo__box .todo__form-box .todo__form .btn-add {
+  position: absolute;
+  display: inline-block;
+  top: 1rem;
+  right: 1rem;
+  background-color: #6FDA9A;
+}
 
 /*# sourceMappingURL=style.css.map */
