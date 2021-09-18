@@ -1,5 +1,13 @@
 @import 'mixin';
 
+.btn {
+    padding: 0.4rem 1.7rem;
+    color: $white;
+    margin-left: 0.5rem;
+    border-radius: 1rem;
+    font-size: 1.6rem;
+}
+
 #todo {
     @include flexBox;
 
@@ -16,11 +24,12 @@
 
     .todo__box {
         @include width-height(40rem, 35rem);
-        @include flexBox(space-between, column);
+        @include flexBox(none, column);
         position: relative;
         background-color: rgba($color: $white, $alpha: .3);
         padding: 0.5rem;
         border-radius: 2rem;
+        overflow: hidden;
 
 
         .todo__header {
@@ -31,8 +40,7 @@
             @include width-height(100%, 3rem);
             box-sizing: border-box;
             padding: 1rem 0.5rem;
-            position: absolute;
-            top: 7rem;
+            position: relative;
 
             .todo__form {
                 @include flexBox(space-between);
@@ -59,13 +67,7 @@
                     font-size: 1.8rem;
                 }
 
-                .btn {
-                    padding: 0.4rem 1.7rem;
-                    color: $white;
-                    margin-left: 0.5rem;
-                    border-radius: 1rem;
-                    font-size: 1.6rem;
-                }
+                
 
                 .btn-add {
                     position: absolute;
@@ -78,9 +80,48 @@
 
         }
 
+        .todo__items{
+            @include width-height(100%, auto);
+            padding: 0.5rem 1rem;
+
+            .todo__list{
+                background-color: #0ff;
+                position: relative;
+
+                &-item{
+                    @include flexBox(space-between);
+                    text-align: center;
+
+                    .todo__task-title{
+                        font-size: 1.6rem;
+                        color: $white;
+                        &:focus{
+                            border: 0;
+                            outline: 0;
+                        }
+                    }
+
+                    .todo__task-btn{
+                        padding: 1rem;
+
+                        .btn-edit{
+                            background-color: $lightBlue;
+                            color: $white;
+                            margin-left: 0.5rem;
+                        }
+                        .btn-delete{
+                            background-color: $lightRed;
+                            color: $white;
+                            margin-left: 0.5rem;
+                        }
+                    }
+                }
+            }
+        }
+
     }
 
 
-    
+
 
 }

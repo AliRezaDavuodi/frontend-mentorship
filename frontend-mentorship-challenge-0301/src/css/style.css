@@ -20,6 +20,8 @@ body {
 
 a {
   text-decoration: none;
+  padding: 0.5rem 1rem;
+  font-size: 1.6rem;
 }
 
 li {
@@ -30,6 +32,14 @@ input,
 button {
   border: 0;
   outline: 0;
+}
+
+.btn {
+  padding: 0.4rem 1.7rem;
+  color: #fff;
+  margin-left: 0.5rem;
+  border-radius: 1rem;
+  font-size: 1.6rem;
 }
 
 #todo {
@@ -48,12 +58,13 @@ button {
   min-height: 35rem;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: none;
   flex-direction: column;
   position: relative;
   background-color: rgba(255, 255, 255, 0.3);
   padding: 0.5rem;
   border-radius: 2rem;
+  overflow: hidden;
 }
 #todo .todo__box .todo__header {
   font-size: 4rem;
@@ -63,8 +74,7 @@ button {
   min-height: 3rem;
   box-sizing: border-box;
   padding: 1rem 0.5rem;
-  position: absolute;
-  top: 7rem;
+  position: relative;
 }
 #todo .todo__box .todo__form-box .todo__form {
   display: flex;
@@ -93,19 +103,49 @@ button {
   left: 1rem;
   font-size: 1.8rem;
 }
-#todo .todo__box .todo__form-box .todo__form .btn {
-  padding: 0.4rem 1.7rem;
-  color: #fff;
-  margin-left: 0.5rem;
-  border-radius: 1rem;
-  font-size: 1.6rem;
-}
 #todo .todo__box .todo__form-box .todo__form .btn-add {
   position: absolute;
   display: inline-block;
   top: 1rem;
   right: 1rem;
   background-color: #6FDA9A;
+}
+#todo .todo__box .todo__items {
+  min-width: 100%;
+  min-height: auto;
+  padding: 0.5rem 1rem;
+}
+#todo .todo__box .todo__items .todo__list {
+  background-color: #0ff;
+  position: relative;
+}
+#todo .todo__box .todo__items .todo__list-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  text-align: center;
+}
+#todo .todo__box .todo__items .todo__list-item .todo__task-title {
+  font-size: 1.6rem;
+  color: #fff;
+}
+#todo .todo__box .todo__items .todo__list-item .todo__task-title:focus {
+  border: 0;
+  outline: 0;
+}
+#todo .todo__box .todo__items .todo__list-item .todo__task-btn {
+  padding: 1rem;
+}
+#todo .todo__box .todo__items .todo__list-item .todo__task-btn .btn-edit {
+  background-color: #74b9ff;
+  color: #fff;
+  margin-left: 0.5rem;
+}
+#todo .todo__box .todo__items .todo__list-item .todo__task-btn .btn-delete {
+  background-color: #ff7675;
+  color: #fff;
+  margin-left: 0.5rem;
 }
 
 /*# sourceMappingURL=style.css.map */
