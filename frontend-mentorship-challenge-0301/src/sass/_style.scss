@@ -8,6 +8,11 @@
     border-radius: 1rem;
     font-size: 1.6rem;
     transition: all 300ms;
+    box-shadow: 0 1rem 2rem $black;
+
+    &:hover {
+        box-shadow: 0 .5rem 1rem $black;
+    }
 }
 
 #todo {
@@ -21,7 +26,7 @@
         url('../img/hero.jpg');
 
     background-size: 120% 200%;
-     background-position: center;
+    background-position: center;
 
     animation: bgAnimation 3s linear infinite alternate;
 
@@ -34,6 +39,7 @@
         border-radius: 2rem;
         overflow: hidden;
 
+        animation: boxOpacity .5s ease-out .4s backwards;
 
         .todo__header {
             font-size: 4rem;
@@ -70,7 +76,7 @@
                     font-size: 1.8rem;
                 }
 
-                
+
 
                 .btn-add {
                     position: absolute;
@@ -79,7 +85,7 @@
                     right: 1rem;
                     background-color: $lightGreen;
 
-                    &:hover{
+                    &:hover {
                         background-color: darken($lightGreen, 10%);
                     }
                 }
@@ -87,46 +93,48 @@
 
         }
 
-        .todo__items{
+        .todo__items {
             @include width-height(100%, auto);
             padding: 0.5rem 1rem;
 
-            .todo__list{
+            .todo__list {
                 background-color: #0ff;
                 position: relative;
 
-                &-item{
+                &-item {
                     @include flexBox(space-between);
                     text-align: center;
 
-                    .todo__task-title{
+                    .todo__task-title {
                         font-size: 1.6rem;
                         color: $white;
-                        &:focus{
+
+                        &:focus {
                             border: 0;
                             outline: 0;
                         }
                     }
 
-                    .todo__task-btn{
+                    .todo__task-btn {
                         padding: 1rem;
 
-                        .btn-edit{
+                        .btn-edit {
                             background-color: $lightBlue;
                             color: $white;
                             margin-left: 0.5rem;
 
-                            &:hover{
+                            &:hover {
                                 background-color: darken($lightBlue, 10%);
                             }
                         }
-                        .btn-delete{
+
+                        .btn-delete {
                             background-color: $lightRed;
                             color: $white;
                             margin-left: 0.5rem;
 
-                            &:hover{
-                                background-color:darken($lightRed, 10%)
+                            &:hover {
+                                background-color: darken($lightRed, 10%)
                             }
                         }
                     }
