@@ -34,12 +34,21 @@ button {
   outline: 0;
 }
 
+@keyframes bgAnimation {
+  0% {
+    background-position: -2rem center;
+  }
+  100% {
+    background-position: 0 center;
+  }
+}
 .btn {
   padding: 0.4rem 1.7rem;
   color: #fff;
   margin-left: 0.5rem;
   border-radius: 1rem;
   font-size: 1.6rem;
+  transition: all 300ms;
 }
 
 #todo {
@@ -49,9 +58,9 @@ button {
   flex-direction: row;
   height: 100vh;
   background-image: linear-gradient(to right bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../img/hero.jpg");
-  background-size: cover;
+  background-size: 120% 200%;
   background-position: center;
-  background-repeat: no-repeat;
+  animation: bgAnimation 3s linear infinite alternate;
 }
 #todo .todo__box {
   min-width: 40rem;
@@ -110,6 +119,9 @@ button {
   right: 1rem;
   background-color: #6FDA9A;
 }
+#todo .todo__box .todo__form-box .todo__form .btn-add:hover {
+  background-color: #46d07e;
+}
 #todo .todo__box .todo__items {
   min-width: 100%;
   min-height: auto;
@@ -142,10 +154,16 @@ button {
   color: #fff;
   margin-left: 0.5rem;
 }
+#todo .todo__box .todo__items .todo__list-item .todo__task-btn .btn-edit:hover {
+  background-color: #419fff;
+}
 #todo .todo__box .todo__items .todo__list-item .todo__task-btn .btn-delete {
   background-color: #ff7675;
   color: #fff;
   margin-left: 0.5rem;
+}
+#todo .todo__box .todo__items .todo__list-item .todo__task-btn .btn-delete:hover {
+  background-color: #ff4342;
 }
 
 /*# sourceMappingURL=style.css.map */
