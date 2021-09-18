@@ -125,6 +125,7 @@ button {
   padding: 1rem;
   background-color: transparent;
   border-bottom: 1px solid #000;
+  color: #fff;
 }
 #todo .todo__box .todo__form-box .todo__form .todo__form-input .todo__input:focus + label span,
 #todo .todo__box .todo__form-box .todo__form .todo__form-input .todo__input:valid + label span {
