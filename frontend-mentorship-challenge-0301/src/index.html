@@ -1,13 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+        integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="css/style.css">
     <title>ToDo App</title>
+    <script src="js/index.js" defer></script>
 </head>
+
 <body>
-    
+    <main role="main">
+        <section id="todo">
+            <h1 class="todo__header">
+                task manager
+            </h1>
+            <div class="todo__form-box">
+                <form action="#" class="todo__form">
+                    <div class="todo__form-input">
+                        <input id="title-input" type="text" class="todo__form">
+                    </div>
+                    <label for="title-input">
+                        <span class="todo__form-label">
+                            add new task
+                        </span>
+                    </label>
+                    <div class="todo__form btn">
+                        <a href="#" class="btn btn-add">edit</a>
+                    </div>
+                </form>
+                <div class="todo__items">
+                    <ui class="todo__list">
+                        <li class="todo__list-item">
+                            <div class="todo__task-box">
+                                <input type="text" class="todo__task-input">
+                            </div>
+                            <div class="todo__task-btn">
+                                <a href="#" class="btn btn-edit">edit</a>
+                                <a href="#" class="btn btn-delete">delete</a>
+                            </div>
+                        </li>
+                    </ui>
+                </div>
+            </div>
+
+        </section>
+    </main>
+
 </body>
+
 </html>
