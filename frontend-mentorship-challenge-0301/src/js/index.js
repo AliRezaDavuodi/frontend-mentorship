@@ -2,16 +2,23 @@
 (function () {
 
     // state ----------------------------------
-    const items = [];
+    let items = [];
 
     // variables
     const mainInput = document.querySelector('.todo__input')
     const taskBox = document.querySelector('.todo__list')
-    const addBtn = document.querySelector('.btn-add')
-    const editBtn = document.querySelectorAll('.btn-edit')
     let id, taskTitle;
 
+    readStorage();
+
+
     // Event Listeners
+    window.addEventListener('keyup', function (e) {
+        if (e.keyCode === 13) {
+            addItem();
+        }
+    })
+
     window.addEventListener('click', function (e) {
         if (e.target.innerText === 'Add') {
             addItem();
@@ -30,48 +37,42 @@
     //functions ----------------------------------------------
     function addItem() {
 
-       if (items.length < 8) {
+        if (items.length < 8) {
             // create id
-        id = items.length ? items[items.length - 1].itemId + 1 : 0;
+            id = items.length ? items[items.length - 1].itemId + 1 : 0;
 
-        // get value from main input
-        if (mainInput.value) {
-            taskTitle = mainInput.value;
+            // get value from main input
+            if (mainInput.value) {
+                taskTitle = mainInput.value;
 
-            // make the structure of taskss
-            const taskItem = {
-                itemId: id,
-                itemContent: `<li class="todo__list-item" id = ${id}>
-            <p class="todo__task-title"> ${taskTitle} </p>
-            <div class="todo__task-btn">
-                <a href="#" class="btn btn-edit">edit</a>
-                <a href="#" class="btn btn-delete">delete</a>
-            </div>
-          </li> `
+                // make the structure of taskss
+                const taskItem = {
+                    itemId: id,
+                    itemTitle: taskTitle
+                }
+
+                // add a new item to the state
+                items.push(taskItem);
+
+                // Update Ui
+                updateUi();
+
+                // clear main input field and focus
+                mainInput.value = '';
+                mainInput.focus();
+
+            } else {
+                alert('Please Write Something To Add')
             }
-
-            // add a new item to the state
-            items.push(taskItem);
-
-            // Update Ui
-            updateUi();
-
-            // clear main input field and focus
-            mainInput.value = '';
-            mainInput.focus();
-
         } else {
-            alert('Please Write Something To Add')
+            alert('there is no space to add task')
         }
-       }else{
-           alert('you add more ...')
-       }
     }
 
     function deleteItem(e) {
 
         // find item's id
-        let ID = e.target.parentElement.parentElement.id
+        let ID = e.target.parentElement.id
         ID = items.findIndex(item => item.itemId == ID)
 
         // delete it fom state
@@ -94,6 +95,7 @@
 
     function saveTask(e) {
 
+
         // Cahnge Btn Name From SAVE To EDIT
         e.target.innerText = 'Edit';
 
@@ -101,15 +103,46 @@
         e.target.parentElement.parentElement.children[0].setAttribute('Contenteditable', 'false');
         e.target.parentElement.parentElement.children[0].blur()
         e.target.parentElement.parentElement.children[0].style.color = '#fff';
+
+        // update state
+        let id = e.target.parentElement.id;
+        id = items.findIndex(item => item.itemId == id)
+        items.splice(id, 1, {
+            itemId: id,
+            itemTitle: e.target.parentElement.parentElement.children[0].innerText
+        })
+
+        // update Ui
+        updateUi();
     }
 
 
     function updateUi() {
+        persistData();
         taskBox.innerHTML = '';
-        items.map(item => {
-            taskBox.insertAdjacentHTML('beforeend', item.itemContent)
+        items.forEach(item => {
+            const tasks = `<li class="todo__list-item" >
+            <p class="todo__task-title"> ${item.itemTitle} </p>
+            <div class="todo__task-btn" id = ${item.itemId}>
+                <a href="#" class="btn btn-edit">edit</a>
+                <a href="#" class="btn btn-delete">delete</a>
+            </div>
+          </li> `;
 
+            taskBox.insertAdjacentHTML('beforeend', tasks)
         })
+    }
+
+    function persistData(params) {
+        localStorage.setItem('item', JSON.stringify(items))
+    }
+
+    function readStorage(params) {
+        const storage = JSON.parse(localStorage.getItem('item'))
+        if (storage) {
+            items = storage;
+            updateUi();
+        }
     }
 
 })();
