@@ -15,9 +15,9 @@ const items = [];
         if (e.target.innerText === 'Add') {
             addItem();
         } 
-       /*  if (e.target.innerText === 'Delete') {
+        if (e.target.innerText === 'Delete') {
             deleteItem(e);
-        } */
+        }
     })
 
 
@@ -62,7 +62,7 @@ const items = [];
 
 
 
-    /* function deleteItem(e) {
+    function deleteItem(e) {
 
         // find item's id
         let ID = e.target.parentElement.parentElement.id
@@ -77,7 +77,7 @@ const items = [];
         updateUi();
 
     }
- */
+
 
     function updateUi() {
         taskBox.innerHTML = '';
