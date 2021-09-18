@@ -16,6 +16,7 @@ body {
   scroll-behavior: smooth;
   background-color: #ccc;
   text-transform: capitalize;
+  font-family: "Raleway", sans-serif;
 }
 
 a {
@@ -95,6 +96,7 @@ button {
 }
 #todo .todo__box .todo__header {
   font-size: 4rem;
+  color: #fff;
 }
 #todo .todo__box .todo__form-box {
   min-width: 100%;
@@ -124,11 +126,18 @@ button {
   background-color: transparent;
   border-bottom: 1px solid #000;
 }
-#todo .todo__box .todo__form-box .todo__form .todo__form-label {
+#todo .todo__box .todo__form-box .todo__form .todo__form-input .todo__input:focus + label span,
+#todo .todo__box .todo__form-box .todo__form .todo__form-input .todo__input:valid + label span {
+  font-size: 1.2rem;
+  top: -0.1rem;
+  color: #fff;
+}
+#todo .todo__box .todo__form-box .todo__form .todo__form-input .todo__form-label {
   position: absolute;
   top: 1rem;
   left: 1rem;
   font-size: 1.8rem;
+  transition: all 300ms;
 }
 #todo .todo__box .todo__form-box .todo__form .btn-add {
   position: absolute;

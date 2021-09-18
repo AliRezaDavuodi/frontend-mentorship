@@ -43,6 +43,7 @@
 
         .todo__header {
             font-size: 4rem;
+            color: $white;
         }
 
         .todo__form-box {
@@ -65,16 +66,25 @@
                         padding: 1rem;
                         background-color: transparent;
                         border-bottom: 1px solid $black;
+
                     }
 
+                    .todo__input:focus + label span,
+                    .todo__input:valid+label span {
+                        font-size: 1.2rem;
+                        top: -.1rem;
+                        color: $white;
+                    }
+
+                    .todo__form-label {
+                        position: absolute;
+                        top: 1rem;
+                        left: 1rem;
+                        font-size: 1.8rem;
+                        transition: all 300ms;
+                    }
                 }
 
-                .todo__form-label {
-                    position: absolute;
-                    top: 1rem;
-                    left: 1rem;
-                    font-size: 1.8rem;
-                }
 
 
 

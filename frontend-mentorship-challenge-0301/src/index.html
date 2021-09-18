@@ -9,6 +9,9 @@
         integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
     <title>ToDo App</title>
     <script src="js/index.js" defer></script>
 </head>
@@ -17,28 +20,28 @@
     <main role="main">
         <section id="todo">
             <div class="todo__box">
-            <h1 class="todo__header">
-                task manager
-            </h1>
-            <div class="todo__form-box">
-                <form action="#" class="todo__form">
-                    <div class="todo__form-input">
-                        <input id="title-input" type="text" class="todo__input">
-                    </div>
-                    <label for="title-input">
-                        <span class="todo__form-label">
-                            add new task
-                        </span>
-                    </label>
-                    <div class="todo__form btn">
-                        <a href="#" class="btn btn-add">add</a>
-                    </div>
-                </form>
-            </div>
+                <h1 class="todo__header">
+                    task manager
+                </h1>
+                <div class="todo__form-box">
+                    <form action="#" class="todo__form">
+                        <div class="todo__form-input">
+                            <input id="title-input" type="text" required class="todo__input">
+                            <label for="title-input">
+                                <span class="todo__form-label">
+                                    add new task
+                                </span>
+                            </label>
+                        </div>
+                        <div class="todo__form btn">
+                            <a href="#" class="btn btn-add">add</a>
+                        </div>
+                    </form>
+                </div>
                 <div class="todo__items">
                     <ui class="todo__list">
                         <li class="todo__list-item">
-                                <p contenteditable="true" class="todo__task-title"> demo </p>
+                            <p contenteditable="true" class="todo__task-title"> demo </p>
                             <div class="todo__task-btn">
                                 <a href="#" class="btn btn-edit">edit</a>
                                 <a href="#" class="btn btn-delete">delete</a>
@@ -46,8 +49,8 @@
                         </li>
                     </ui>
                 </div>
-            
-        </div>
+
+            </div>
         </section>
     </main>
 
