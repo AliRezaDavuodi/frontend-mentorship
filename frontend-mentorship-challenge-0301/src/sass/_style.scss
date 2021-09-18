@@ -25,10 +25,8 @@
             rgba($black, .4)),
         url('../img/hero.jpg');
 
-    background-size: 120% 200%;
+    background-size: cover;
     background-position: center;
-
-    animation: bgAnimation 3s linear infinite alternate;
 
     .todo__box {
         @include width-height(40rem, 35rem);

@@ -35,14 +35,6 @@ button {
   outline: 0;
 }
 
-@keyframes bgAnimation {
-  0% {
-    background-position: -2rem center;
-  }
-  100% {
-    background-position: 0 center;
-  }
-}
 @keyframes boxOpacity {
   0% {
     opacity: 0;
@@ -76,9 +68,8 @@ button {
   flex-direction: row;
   height: 100vh;
   background-image: linear-gradient(to right bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../img/hero.jpg");
-  background-size: 120% 200%;
+  background-size: cover;
   background-position: center;
-  animation: bgAnimation 3s linear infinite alternate;
 }
 #todo .todo__box {
   min-width: 40rem;

@@ -1,30 +1,33 @@
-const items = [];
 
 (function () {
+
+    // state ----------------------------------
+    const items = [];
+
     // variables
     const mainInput = document.querySelector('.todo__input')
     const taskBox = document.querySelector('.todo__list')
     const addBtn = document.querySelector('.btn-add')
     const editBtn = document.querySelectorAll('.btn-edit')
-
     let id, taskTitle;
 
-    // state ----------------------------------
-
+    // Event Listeners
     window.addEventListener('click', function (e) {
         if (e.target.innerText === 'Add') {
             addItem();
-        } 
-        if (e.target.innerText === 'Delete') {
+        }
+        else if (e.target.innerText === 'Delete') {
             deleteItem(e);
+        }
+        else if (e.target.innerText === 'Edit') {
+            editTask(e);
+        }
+        else if (e.target.innerText === 'Save') {
+            saveTask(e);
         }
     })
 
-
-
-
     //functions ----------------------------------------------
-
     function addItem() {
 
         // create id
@@ -38,7 +41,7 @@ const items = [];
             const taskItem = {
                 itemId: id,
                 itemContent: `<li class="todo__list-item" id = ${id}>
-            <p contenteditable="true" class="todo__task-title"> ${taskTitle} </p>
+            <p class="todo__task-title"> ${taskTitle} </p>
             <div class="todo__task-btn">
                 <a href="#" class="btn btn-edit">edit</a>
                 <a href="#" class="btn btn-delete">delete</a>
@@ -60,22 +63,39 @@ const items = [];
         }
     }
 
-
-
     function deleteItem(e) {
 
         // find item's id
         let ID = e.target.parentElement.parentElement.id
-        console.log(ID, 'first')
         ID = items.findIndex(item => item.itemId == ID)
-        console.log(ID, 'second')
 
         // delete it fom state
         items.splice(ID, 1)
 
         // update Ui
         updateUi();
+    }
 
+    function editTask(e) {
+
+        // Cahnge Btn Name From EDIT To SAVE
+        e.target.innerText = 'Save';
+
+        // Add  Contenteditable="TRUE" To Task
+        e.target.parentElement.parentElement.children[0].setAttribute('Contenteditable', 'true');
+        e.target.parentElement.parentElement.children[0].focus()
+        e.target.parentElement.parentElement.children[0].style.color = '#f00';
+    }
+
+    function saveTask(e) {
+
+        // Cahnge Btn Name From SAVE To EDIT
+        e.target.innerText = 'Edit';
+
+        // Add  Contenteditable="FALSE" To Task
+        e.target.parentElement.parentElement.children[0].setAttribute('Contenteditable', 'false');
+        e.target.parentElement.parentElement.children[0].blur()
+        e.target.parentElement.parentElement.children[0].style.color = '#fff';
     }
 
 
