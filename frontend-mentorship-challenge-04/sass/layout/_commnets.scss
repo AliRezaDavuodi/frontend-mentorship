@@ -1,0 +1,53 @@
+.commnets {
+  padding: 10rem 5rem;
+  background-color: rgba($color-secondary, 0.3);
+
+  &__header {
+    text-align: center;
+    padding: 2rem;
+  }
+
+  &__box {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  &__card {
+    background-color: #fff;
+    box-shadow: 0 2rem 4rem rgba(#000, 0.4);
+    width: 30%;
+    padding: 5rem;
+    transition: all 0.3s;
+
+    &:hover {
+      transform: translateY(-1rem);
+    }
+
+    &--stars {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+
+      .icon {
+        width: 2rem;
+        height: 2rem;
+        fill: darken($color: $color-secondary, $amount: 50%);
+        &:not(:last-child) {
+          margin-right: 0.5rem;
+        }
+      }
+    }
+
+    &--profile {
+      display: flex;
+      align-items: center;
+
+      img {
+        width: 6rem;
+        height: 6rem;
+        border-radius: 50%;
+      }
+    }
+  }
+}

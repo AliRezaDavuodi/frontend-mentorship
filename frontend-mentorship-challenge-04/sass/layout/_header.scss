@@ -1,0 +1,30 @@
+.header {
+  height: 100vh;
+  background-image: url(./../../img/p1.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  .nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 5rem;
+    padding: 0 2rem;
+
+    & > * {
+      width: 33.33%;
+      height: 100%;
+    }
+  }
+
+  &__details {
+    width: 50%;
+    padding: 5rem 10rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+}

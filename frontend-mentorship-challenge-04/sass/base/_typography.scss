@@ -1,0 +1,22 @@
+.heading {
+  text-transform: uppercase;
+
+  &-1 {
+    font-size: 5rem;
+    text-align: center;
+  }
+
+  &-2 {
+    font-size: 6rem;
+    text-transform: lowercase;
+    line-height: 1;
+  }
+
+  &-4 {
+    font-size: 3rem;
+  }
+}
+
+.paragraph {
+  font-size: 1.6rem;
+}

@@ -1,0 +1,31 @@
+.about-us {
+  background-color: #fff;
+  height: auto;
+  padding: 5rem 2rem;
+
+  display: flex;
+  justify-content: space-around;
+
+  & > * {
+    width: 45%;
+    height: 100%;
+  }
+
+  &__text {
+    height: 30rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  &__image {
+    height: 50rem;
+    overflow: hidden;
+
+    img {
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}

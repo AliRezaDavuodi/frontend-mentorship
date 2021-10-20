@@ -1,0 +1,28 @@
+.form__group {
+  background-color: #fff;
+  height: 3.5rem;
+  width: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+
+  .form__input {
+    border: none;
+    outline: none;
+  }
+
+  .form__search {
+    background-color: #b33939;
+    height: 2.5rem;
+    width: 2.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    .icon {
+      width: 1.7rem;
+      fill: #fff;
+    }
+  }
+}
