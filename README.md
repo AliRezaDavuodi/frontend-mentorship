@@ -62,5 +62,19 @@ you can add your tasks to the list, edit them, delete them from the list and als
 ## Netlify Link :
 [click here](https://smart-todo-app.netlify.app/)
 
+---------------------------------------------------------------------------------------------------
+# FrontEnd-Mentorship-challenge-04
+**cosmetic**
+
+## About : 
+
+A cosmetic website
+
+## Languages : 
+*Html - Css - Scss*
+
+## Netlify Link :
+[click here](https://beautifullymentorship.netlify.app/)
+
 
 
